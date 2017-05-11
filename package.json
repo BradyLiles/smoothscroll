@@ -1,6 +1,6 @@
 {
-  "title": "smoothscroll",
-  "name": "smoothscroll-polyfill",
+  "title": "bl-smoothscroll",
+  "name": "bl-smoothscroll-polyfill",
   "version": "0.3.6",
   "author": {
     "name": "Dustan Kasten",
@@ -33,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iamdustan/smoothscroll.git"
+    "url": "git+https://github.com/bradyliles/smoothscroll.git"
   },
   "keywords": [
     "smooth",

@@ -71,6 +71,20 @@
      * @returns {Boolean}
      */
     function shouldBailOut(x) {
+
+        if (
+            typeof x === 'object'
+            &&
+            (
+                x.behavior === 'smooth'
+                ||
+                x.block === 'center'
+            )
+        ) {
+            // first argument is an object and behavior is smooth
+            return false;
+        }
+
       if (typeof x !== 'object'
             || x === null
             || x.behavior === undefined
@@ -81,11 +95,6 @@
         return true;
       }
 
-      if (typeof x === 'object'
-            && x.behavior === 'smooth') {
-        // first argument is an object and behavior is smooth
-        return false;
-      }
 
       // throw error when behavior is not supported
       throw new TypeError('behavior not valid');
@@ -285,6 +294,14 @@
       var parentRects = scrollableParent.getBoundingClientRect();
       var clientRects = this.getBoundingClientRect();
 
+      var offset = 0;
+      if (typeof arguments[0] === 'object') {
+          if (arguments[0].block === 'center'
+              || arguments[0].inline === 'center') {
+              offset = -(window.innerHeight / 2);
+          }
+      }
+
       if (scrollableParent !== d.body) {
         // reveal element inside parent
         smoothScroll.call(
@@ -292,6 +309,7 @@
           scrollableParent,
           scrollableParent.scrollLeft + clientRects.left - parentRects.left,
           scrollableParent.scrollTop + clientRects.top - parentRects.top
+          + offset
         );
         // reveal parent in viewport
         w.scrollBy({

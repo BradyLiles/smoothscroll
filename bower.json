@@ -4,7 +4,8 @@
   "main": "dist/smoothscroll.js",
   "authors": [
     "Dustan Kasten",
-    "Jeremias Menichelli"
+    "Jeremias Menichelli",
+    "Brady Liles"
   ],
   "license": "MIT",
   "keywords": [

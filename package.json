@@ -1,7 +1,7 @@
 {
   "title": "smoothscroll",
   "name": "smoothscroll-polyfill",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "author": {
     "name": "Dustan Kasten",
     "email": "dustan.kasten@gmail.com",
@@ -12,6 +12,11 @@
       "name": "Jeremias Menichelli",
       "email": "jmenichelli@gmail.com",
       "url": "https://jeremenichelli.github.io"
+    },
+    {
+      "name": "Brady Liles",
+      "email": "bradyliles@outlook.com",
+      "url": "https://bradyliles.github.io"
     }
   ],
   "devDependencies": {
@@ -36,10 +41,10 @@
     "CSSOM",
     "polyfill"
   ],
-  "copyright": 2016,
+  "copyright": 2017,
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/iamdustan/smoothscroll/issues"
+    "url": "https://github.com/bradyliles/smoothscroll/issues"
   },
   "homepage": "https://iamdustan.github.io/smoothscroll"
 }

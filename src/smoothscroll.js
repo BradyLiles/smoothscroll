@@ -90,7 +90,6 @@
       }
 
 
-
       // throw error when behavior is not supported
       throw new TypeError('behavior not valid');
     }
@@ -290,10 +289,10 @@
       var clientRects = this.getBoundingClientRect();
 
       var offset = 0;
-      if( typeof arguments[0] === 'object' )
-      {
-          if( arguments[0].block === 'center' || arguments[0].inline === 'center' ) {
-              offset = -( window.innerHeight / 2 );
+      if (typeof arguments[0] === 'object') {
+          if (arguments[0].block === 'center'
+              || arguments[0].inline === 'center') {
+              offset = -(window.innerHeight / 2);
           }
       }
 
@@ -303,7 +302,8 @@
           this,
           scrollableParent,
           scrollableParent.scrollLeft + clientRects.left - parentRects.left,
-          scrollableParent.scrollTop + clientRects.top - parentRects.top + offset
+          scrollableParent.scrollTop + clientRects.top - parentRects.top
+          + offset
         );
         // reveal parent in viewport
         w.scrollBy({
